@@ -25,7 +25,7 @@ def blackjack():
         print("\n")
 
         # Players Hand 
-        if not ace_flip and "A" in players_hand and input("Want to flip your Ace (current-value: 11)").lower().startswith('y'):
+        if not ace_flip and "A" in players_hand and input("Want to flip your Ace? (current-value: 11) Type [ yes | no ]: ").lower().startswith('y'):
             ace_flip = True
 
         get_card = input("Do you want to hit or stay? Type [ hit | stay ]: ").startswith('h')
