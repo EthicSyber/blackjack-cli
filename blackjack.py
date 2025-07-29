@@ -34,7 +34,7 @@ class BlackJack:
     def get_card_value(self, card:str) -> int:
         """Get the current value for the card
         
-        :params str, list card: gets the current card from the hand
+        :params str card: gets the current card to determine cards value
 
         :returns: the value of the card 
         """
@@ -48,7 +48,7 @@ class BlackJack:
         """Calculates the value of the current hand dealt.
         
         :params list hand: the player | dealers hand.
-        :params bool dealer: whether hand is the players | dealers.
+        :params bool ace_flip: whether hand is the players | dealers.
 
         :returns total: the sum of the hand.
         """
@@ -62,12 +62,11 @@ class BlackJack:
         return total
     
     def is_winner(self, total) -> bool:
-        """Checks player | dealers hand to see if they won.
+        """Checks player | dealers total to see if they won.
         
-        :params list hand: the [player | dealer] hand to check
-        :params bool dealer: if the hand is for the dealer or player
+        :params int total: the [player | dealer] total to check
 
-        :returns tuple | bool: if player | dealer has won, return True and whether it was a player or dealer (else: False)
+        :returns bool: if player | dealer has won, return True and whether it was a player or dealer (else: False)
         """
         if total == WINNING_NUMBER:
             return True 
@@ -76,8 +75,8 @@ class BlackJack:
     def is_draw(self, p_total:int, d_total:int) -> bool:
         """Checks the player and dealers hand to determine if the game is a draw.
 
-        :params list p_hand: the players hand
-        :params list d_hand: the dealers hand
+        :params int p_hand: the players total
+        :params int d_hand: the dealers total
 
         :returns bool: if game is draw, returns True (else: False)
 
@@ -87,13 +86,24 @@ class BlackJack:
         return False
     
     def is_bust(self, total:int) -> bool:
-        """Checks if the total of a hand goes over the winning number"""
+        """Checks if the total of a hand goes over the winning number
+        
+        :params int total: the [ player | dealer ] total
+
+        :returns: whether the player | dealer has bust (else: False)
+        """
         if total > WINNING_NUMBER:
             return True
         return False
     
     def is_greater(self, first_hand_total:int, second_hand_total:int) -> bool:
-        """Checks the both hands to see if one was greater than the other"""
+        """Checks the both hands to see if one was greater than the other
+
+        :params int first_hand_total: total of dealers hand or players
+        :params int second_hand_total: total of players hand or vice versa
+
+        :returns: Will prove True if the first hands total is greater than the second (else: False)
+        """
         if first_hand_total > second_hand_total:
             return True
         return False
