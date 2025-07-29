@@ -2,8 +2,8 @@
 # TODO: Setting up a list/dict of cards with the values for each card - (Complete)
 # TODO: Setting up a dealer function that will deal cards to a player - (Complete)
 # * TODO: Set up a flip card to handle an Ace (Complete)
-# * TODO: Set a flag for whether its the dealer or players hand
-# TODO: Setting up a compare function that will compare the dealers and the players cards - (INCOMPLETE)
+# * TODO: Set a flag for whether its the dealer or players hand (Complete)
+# TODO: Setting up a compare function that will compare the dealers and the players cards - (Complete)
 # * TODO: Setup a is_winner function to check if the current player | dealers hand is the winner (Complete)
 # * TODO: Setup a is_draw function to check if the player and dealer have the same values in their hand (Complete)
 # TODO: Setting up a deal card check to see wether or not the player will continue playing (i.e., do you want to stand | hit) - (Complete)
